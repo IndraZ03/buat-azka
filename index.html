@@ -108,7 +108,7 @@
         </div>
         <button
           id="music-btn"
-          class="w-16 h-16 bg-brand-secondary rounded-full flex items-center justify-center text-white text-2xl shadow-lg transform hover:scale-110 transition-transform"
+          class="text-center w-16 h-16 bg-brand-secondary rounded-full flex items-center justify-center text-white text-2xl shadow-lg transform hover:scale-110 transition-transform"
         >
           <i id="music-icon" class="fas fa-play"></i>
         </button>
@@ -150,7 +150,7 @@
               >"However difficult life may seem, there is always something you
               can do and succeed at"</b
             >
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;
             —Stephen Hawking
 
             <br /><br />
@@ -181,7 +181,7 @@
         class="font-dancing-script text-4xl md:text-5xl text-center mb-12"
         data-aos="fade-up"
       >
-        Ringkasan First Date WKWKWK
+        Foto-Foto First Date WKWKWK
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         <div
@@ -493,7 +493,10 @@
           if (score >= 5 && !gameEnded) {
             gameEnded = true;
             gameMessage.textContent = "Aduh Meleleh Hatiqu! ❤️";
-            setTimeout(showProposal, 2000);
+            // Alihkan ke section heart-hunt setelah 2 detik
+            setTimeout(() => {
+              document.getElementById('heart-hunt').scrollIntoView({ behavior: 'smooth' });
+            }, 2000);
           }
           requestAnimationFrame(updateGame);
         }
